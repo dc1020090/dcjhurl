@@ -1,0 +1,36 @@
+html,body{
+    height:100%;
+    font-family: 'Microsoft JhengHei';
+}
+.font-consolas {
+    font-family: 'consolas';
+}
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  /* Negative indent footer by it's height */
+  margin: 0 auto -30px;
+}
+
+#push,
+#footer {
+  height: 30px;
+  text-align:right;
+}
+
+.trans_form
+{
+    background-color:rgba(255,255,255,0.95);
+    border-radius: 15px;
+    padding : 10px;
+}
+
+.trans_form_mh300
+{
+    background-color:rgba(255,255,255,0.9);
+    border-radius: 15px;
+    min-height : 300px;
+    padding : 15px;
+}
+
