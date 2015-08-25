@@ -15,11 +15,13 @@ if(isset($_POST['name'],$_POST['pass'],$_POST['checkpass'],$_POST['mail']))
 	if($pass!=$checkpass)
 	{
 		deliver(6,"$url"."log/add.php");
+		exit;
 	}
 	else if($username=='' || $name=='' || $pass=='' || $checkpass=='')
 	{
 		$check=false;
 		deliver(7,"$url"."log/add.php");
+		exit;
 	}
 	else if($check)
 	{

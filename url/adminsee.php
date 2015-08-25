@@ -7,11 +7,13 @@ if(isset($_SESSION['username']))
 	if($root>1)
 	{
 		deliver(1,"$url");
+		exit;
 	}
 }
 else
 {
 	deliver(1,"$url");
+	exit;
 }
 ?>
 <?php

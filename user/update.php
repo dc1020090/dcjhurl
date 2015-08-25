@@ -7,6 +7,7 @@ $go="'$url'index.php";
 if(!isset($_SESSION['username']))
 {
 		deliver(1 ,$go);
+		exit;
 }
 ?>
 <?php

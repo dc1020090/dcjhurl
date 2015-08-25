@@ -10,11 +10,13 @@ if(isset($_SESSION['username']))
 	if($root>1)
 	{
 		deliver(1 ,$go);
+		exit;
 	}
 }
 else
 {
 	deliver(1 ,$go);
+	exit;
 }
 ?>
 <?php

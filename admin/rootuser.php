@@ -9,11 +9,13 @@ if(isset($_SESSION['username']))
 	if($root>0)
 	{
 		deliver(1,"$url"."index.php");
+		exit;
 	}
 }
 else
 {
 	deliver(1,"$url"."index.php");
+	exit;
 }
 ?>
 <?php

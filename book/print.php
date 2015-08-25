@@ -10,6 +10,7 @@ if(isset($_GET['book']))
 else
 {
 	deliver(4,"$url"."book/seeall.php");
+	exit;
 }
 ?>
 <?php
