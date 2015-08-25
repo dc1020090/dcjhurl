@@ -14,11 +14,13 @@
 			
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+				<li><a href="<?php echo $url ?>about.php">ABOUT</a></li>
                      <?php 
 					  if(!isset($_SESSION['username']))
 					  {
 						  
 						 ?>
+						 
 						 <li><a href="#" data-toggle="modal" data-target="#login">登入</a></li>
 						 <li><a href="<?php echo $url ?>log/add.php">加入會員</a></li>
 					  <?php

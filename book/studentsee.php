@@ -13,6 +13,7 @@ if(isset($_SESSION['username']))
 else
 {
 	$_SESSION['error']=1;
+	exit;
 ?>
 <meta http-equiv="refresh" content="0;url=<?=$url?>index.php"></meta>
 <?php
