@@ -38,16 +38,16 @@ if(isset($_POST['name']))
 <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 trans_form_mh300 panel panel-default">
-				<center><h3>修改 <?php echo $updatename[5] ?> 的資料</h3></center>
-					<form name="form" method="POST" action="update.php?id=<?php echo $updatename[0] ?>" role="form">
+				<center><h3>修改 <?php echo htmlentities($updatename[5]); ?> 的資料</h3></center>
+					<form name="form" method="POST" action="update.php?id=<?php echo htmlentities($updatename[0]) ?>" role="form">
 						<center>
 						<lable for="name">姓名</lable>
 						<div class="form-group">
-							<input type="name" class="textinput" name="name" value="<?php echo $updatename[5]?>">
+							<input type="name" class="textinput" name="name" value="<?php echo htmlentities($updatename[5])?>">
 						</div>
 						<lable for="name">密碼</lable>
 						<div class="form-group">
-							<input type="name" class="password" name="pass" value="<?php echo $updatename[2]?>">
+							<input type="name" class="password" name="pass" value="<?php echo htmlentities($updatename[2])?>">
 						</div>
 						<div class="form-group">
 							<button type="submit" class="btn btn-default">修改</button>

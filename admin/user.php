@@ -54,9 +54,9 @@ $res->execute(array($user));
 				}
 				?>
 				<tr>
-				<td class="active"><?=$value[1]?></td>
-				<td ><?=$value[5]?></td>
-				<td><?=$root?></td>
+				<td class="active"><?=htmlentities($value[1])?></td>
+				<td ><?=htmlentities($value[5])?></td>
+				<td><?=htmlentities($root)?></td>
 				<td >
 				<a class="icon-bttn" href="delete.php?id=<?php echo $value[0]?>">
                     <span class="glyphicon glyphicon-trash" title="刪除"></span>

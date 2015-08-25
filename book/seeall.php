@@ -53,8 +53,8 @@ else
 							$varname=$resname->fetch();
 				   ?>
 				<tr >
-					  <td ><?php echo $value[1]; ?></td>
-					  <td class="active"><?php echo $varname[5]; ?></td>
+					  <td ><?php echo htmlentities($value[1]); ?></td>
+					  <td class="active"><?php echo htmlentities($varname[5]); ?></td>
 					  <?php $qr="$url"."qrcode/php/qr.php?d="."$url"."url/studentsee.php?book="."$value[0]"; ?>
 					  <td ><a href="<?= $qr ?>">qrcode</td>
 				  <?php 

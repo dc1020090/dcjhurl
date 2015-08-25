@@ -49,7 +49,7 @@ if(isset($_POST['name']) && $root<=0)
 <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 col-md-8 col-sm-8 trans_form_mh300 panel panel-default">
-				<center><h3>修改 <?php echo $updatename[5] ?> 身分</h3></center>
+				<center><h3>修改 <?php echo htmlentities($updatename[5]) ?> 身分</h3></center>
 				<center><p>0:管理員</p><p>1:老師</p><p>2:學生</p></center>
 					<form name="form" method="POST" action="update.php?id=<?php echo $id ?>" role="form">
 						<center>

@@ -38,8 +38,8 @@ $res->execute(array($book));
 					{
 						?>
 						<tr>
-						<td><?=$value[1]?></td>
-						<td><?=$value[2]?></td>
+						<td><?=htmlentities($value[1])?></td>
+						<td><?=htmlentities($value[2])?></td>
 						<td><img src="<?=$url?>qrcode/php/qr.php?d=<?=$value[2]?>" > </td>
 						</tr>
 						<?php

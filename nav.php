@@ -26,7 +26,7 @@
 					  else
 					  {
 						  ?>
-						  <li><a href="<?=$url?>user/update.php"><?php echo $_SESSION['name']; ?></a></li>
+						  <li><a href="<?=$url?>user/update.php"><?php echo htmlentities($_SESSION['name']); ?></a></li>
                           <li><a href="<?php echo $url ?>log/logout.php">登出</a></li>  
 				</ul>
 				<?php } ?>
