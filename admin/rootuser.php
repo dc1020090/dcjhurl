@@ -60,9 +60,6 @@ $res->execute(array($user));
 				<td ><?=htmlentities($value[5])?></td>
 				<td><?=htmlentities($root)?></td>
 				<td >
-				<a class="icon-bttn" href="delete.php?id=<?php echo $value[0]?>">
-                    <span class="glyphicon glyphicon-trash" title="刪除"></span>
-                </a>
 				<a class="icon-bttn" href="../admin/update.php?id=<?php echo $value[0]?>">
                         <span class="glyphicon glyphicon-pencil" title="修改身分"></span>
                     </a>
