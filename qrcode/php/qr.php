@@ -1,4 +1,5 @@
 <?php
+require('../../header.php');
 /*
 #
 # QRcode image PHP scripts  version 0.50j (C)2000-2013,Y.Swetake
@@ -54,9 +55,19 @@ $image_path="../image";    /* You must set path to QRcode frame images. */
 
 $version_ul=40;              /* upper limit for version  */  
 /* ------ setting area end ------ */
+if(isset($_GET["d"]))exit;
+$url=@$_GET["d"];
+$sql="SELECT * FROM `url` WHERE `id` = $url";
+$res=$test->query($sql);
+if($value=$res->fetch())
+{
+	$qrcode_data_string=$value[0];
+}
+else
+{
+	exit;
+}
 
-
-$qrcode_data_string=@$_GET["d"];
 $qrcode_error_correct=@$_GET["e"];
 $qrcode_module_size=@$_GET["s"];
 $qrcode_version=@$_GET["v"];
