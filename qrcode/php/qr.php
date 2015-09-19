@@ -1,5 +1,5 @@
 <?php
-require('../../header.php');
+require('../../Connections/dcjh.php');
 /*
 #
 # QRcode image PHP scripts  version 0.50j (C)2000-2013,Y.Swetake
@@ -55,18 +55,28 @@ $image_path="../image";    /* You must set path to QRcode frame images. */
 
 $version_ul=40;              /* upper limit for version  */  
 /* ------ setting area end ------ */
-if(isset($_GET["d"]))exit;
+if(!isset($_GET["d"]))exit;
 $url=@$_GET["d"];
-$sql="SELECT * FROM `url` WHERE `id` = $url";
-$res=$test->query($sql);
-if($value=$res->fetch())
+if(preg_match("/^(https?:\/\/+[\w\-]+\.[\w\-]+)/i","$url"))
 {
-	$qrcode_data_string=$value[0];
+	//echo "url";
+	$qrcode_data_string=$url;
 }
 else
 {
-	exit;
+	//echo "number";
+	$sql="SELECT * FROM `url` WHERE `id` = $url";
+	$res=$test->query($sql);
+	if($value=$res->fetch())
+	{
+		$qrcode_data_string=$value[0];
+	}
+	else
+	{
+		exit;
+	}
 }
+
 
 $qrcode_error_correct=@$_GET["e"];
 $qrcode_module_size=@$_GET["s"];

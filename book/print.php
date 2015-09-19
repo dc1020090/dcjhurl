@@ -41,7 +41,7 @@ $res->execute(array($book));
 						<tr>
 						<td><?=htmlentities($value[1])?></td>
 						<td><?=htmlentities($value[2])?></td>
-						<td><img src="<?=$url?>qrcode/php/qr.php?d=<?=urlencode($value[2])?>" > </td>
+						<td><img src="<?=$url?>qrcode/php/qr.php?d=<?=$value[0]?>" > </td>
 						</tr>
 						<?php
 					}
